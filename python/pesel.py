@@ -26,13 +26,13 @@ def calculateDecade(decadeCode):
     }[decadeCode]
     
 def calculateDate(pesel):
-    day = pesel[3:5]
+    day = pesel[4:6]
     month = int(pesel[2:4])
-    decadeCode = 0;
+    decadeCode = 0
 
     while month not in range(1, 12):
         month -= 20
-        decadeCode =+ 20
+        decadeCode += 20
         
     year = str(calculateDecade(decadeCode)) + pesel[:2]
     
